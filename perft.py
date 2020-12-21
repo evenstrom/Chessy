@@ -2,26 +2,6 @@
 import chessy
 
 
-def num_moves_tree(state, depth, i=0, l=[]):
-    sub_moves = chessy.move_generation(state).values()
-    if i >= len(l):
-        l.append(0)
-    l[i] += len(sub_moves)
-    if depth == i + 1:
-        return l
-    for s in sub_moves:
-        l = num_moves_tree(s, depth, i+1, l)
-    return l
-
-
-def perft(depth, splitdepth=0, fenstring=chessy.STARTING_FEN):
-    state = chessy.parse_FEN(fen)
-    chessy.draw_board(state.board)
-    moves = num_moves_tree(state, depth)
-    print(moves)
-    # for i in range():
-    #     print(i, moves[i])
-
 def num_moves(state, num_iterations):
     if num_iterations <= 0:
         return 1
@@ -33,7 +13,7 @@ def num_moves(state, num_iterations):
     return num
 
 
-def perftree(depth, splitdepth=0, fenstring=chessy.STARTING_FEN, movelist=None):
+def perft(depth, splitdepth=0, fenstring=chessy.STARTING_FEN, movelist=None):
     state = chessy.parse_FEN(fenstring)
     if movelist:
         for m in movelist:
@@ -61,4 +41,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 4 and sys.argv[3]:
         movelist = sys.argv[3].split()
 
-    perftree(int(sys.argv[1]), fenstring=sys.argv[2], movelist=movelist)
+    perft(int(sys.argv[1]), fenstring=sys.argv[2], movelist=movelist)
