@@ -460,7 +460,6 @@ def main(state: GameState) -> None:
             else:
                 print("Enter moves in from to square form. eg. e2e4, promotion append q b r n eg. e7e8q")
         draw_board(state.board)
-        print(to_fen(state))
 
         moves = move_generation(state)
         if not moves:
