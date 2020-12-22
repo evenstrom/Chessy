@@ -13,7 +13,7 @@ def num_moves(state, num_iterations):
     return num
 
 
-def perft(depth, splitdepth=0, fenstring=chessy.STARTING_FEN, movelist=None):
+def perft(depth, fenstring, movelist):
     state = chessy.parse_FEN(fenstring)
     if movelist:
         for m in movelist:
@@ -34,11 +34,16 @@ def perft(depth, splitdepth=0, fenstring=chessy.STARTING_FEN, movelist=None):
 
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) < 3 or not sys.argv[1].isdigit():
-        print("Usage is: python perft.py <depth> <FEN string> <movelist>")
+    if len(sys.argv) < 2 or not sys.argv[1].isdigit():
+        print("Usage is: python perft.py <depth> [<FEN string>] [<movelist>]")
         exit(1)
+    try:
+        fen = sys.argv[2]
+    except IndexError:
+        fen = chessy.STARTING_FEN
+
     movelist = None
     if len(sys.argv) == 4 and sys.argv[3]:
         movelist = sys.argv[3].split()
 
-    perft(int(sys.argv[1]), fenstring=sys.argv[2], movelist=movelist)
+    perft(int(sys.argv[1]), fenstring=fen, movelist=movelist)
