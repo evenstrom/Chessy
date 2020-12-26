@@ -1,10 +1,9 @@
 #!/bin/pypy3
-
 """
 A silly chessengine.
 """
-import random
 import re
+import random
 from typing import NamedTuple, Tuple, List, Dict, Set
 
 # Board coordinates for reference
@@ -16,15 +15,6 @@ from typing import NamedTuple, Tuple, List, Dict, Set
 # 80,   81,  82,  83,  84,  85,  86,  87,	
 # 96,   97,  98,  99, 100, 101, 102, 103,	
 # 112, 113, 114, 115, 116, 117, 118, 119,
-
-board_t = List[int]
-class GameState(NamedTuple):
-    board: board_t
-    player: int
-    castle: int
-    ep: int
-    pawnmove: int
-    num_moves: int
 
 COLOUR = [w, b] = [0b0100_0000, 0b1000_0000]
 PLAYER_BITS = 0b1100_0000
@@ -46,19 +36,19 @@ FLAGS = [attacked_square, attacked_piece, unsafe_square,
 PIECE_NOTATION = {"p": bP, "r": bR, "n": bN, "b": bB, "q": bQ, "k": bK,
                   "P": wP, "R": wR, "N": wN, "B": wB, "Q": wQ, "K": wK}
 PIECE_ENCODING = {bP: "p", bR: "r", bN: "n", bB: "b", bQ: "q", bK: "k",
-                  wP: "P", wR: "R", wN: "N", wB :"B", wQ: "Q", wK: "K" }
+                  wP: "P", wR: "R", wN: "N", wB :"B", wQ: "Q", wK: "K"}
 PROMOTE_PIECE = {"r": R, "q": Q, "b": B, "n": N, "R": R, "Q": Q, "B": B, "N": N}
 PROMOTE_PIECE_ENCODING = {R: "r", Q: "q", B: "b", N: "n"}
 
 BOARD_NOTATION = [ 
-    "a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8", "i8","j8","k8","l8","m8","n8","o8", "p8",
-    "a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7", "i7","j7","k7","l7","m7","n7","o7", "p7",
-    "a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6", "i6","j6","k6","l6","m6","n6","o6", "p6",
-    "a5", "b5", "c5", "d5", "e5", "f5", "g5", "h5", "i5","j5","k5","l5","m5","n5","o5", "p5",
-    "a4", "b4", "c4", "d4", "e4", "f4", "g4", "h4", "i4","j4","k4","l4","m4","n4","o4", "p4",
-    "a3", "b3", "c3", "d3", "e3", "f3", "g3", "h3", "i3","j3","k3","l3","m3","n3","o3", "p3",
-    "a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2", "i2","j2","k2","l2","m2","n2","o2", "p2",
-    "a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1", "i1","j1","k1","l1","m1","n1","o1", "p1",]
+    "a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8", "","","","","","","","",
+    "a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7", "","","","","","","","",
+    "a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6", "","","","","","","","",
+    "a5", "b5", "c5", "d5", "e5", "f5", "g5", "h5", "","","","","","","","",
+    "a4", "b4", "c4", "d4", "e4", "f4", "g4", "h4", "","","","","","","","",
+    "a3", "b3", "c3", "d3", "e3", "f3", "g3", "h3", "","","","","","","","",
+    "a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2", "","","","","","","","",
+    "a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1", "","","","","","","","",]
 
 OFF_THE_BOARD = len(BOARD_NOTATION)
 
@@ -85,6 +75,107 @@ MOVE_VECTORS = {
     wQ: [north+west, north+east, south+west, south+east, north, east, south, west],
     bK: [north+west, north+east, south+west, south+east, north, east, south, west],
     wK: [north+west, north+east, south+west, south+east, north, east, south, west],}
+
+
+# Piece and square evaluation from Simplified Evaluation by Tomasz Michniewski 
+# https://www.chessprogramming.org/Simplified_Evaluation_Function
+PIECE_VALUE = { K: 20_000,
+                Q:    900,
+                R:    500,
+                B:    330,
+                N:    320,
+                P:    100, 
+                0:      0,}
+
+OFF_0x88_BOARD = (0,) * 8
+
+PIECE_SQUARE_BONUS = {
+    P: (( 0,  0,  0,  0,  0,  0,  0,  0),
+        (50, 50, 50, 50, 50, 50, 50, 50),
+        (10, 10, 20, 30, 30, 20, 10, 10),
+        ( 5,  5, 10, 25, 25, 10,  5,  5),
+        ( 0,  0,  0, 20, 20,  0,  0,  0),
+        ( 5, -5,-10,  0,  0,-10, -5,  5),
+        ( 5, 10, 10,-20,-20, 10, 10,  5),
+        ( 0,  0,  0,  0,  0,  0,  0,  0)),
+
+    N: ((-50,-40,-30,-30,-30,-30,-40,-50),
+        (-40,-20,  0,  0,  0,  0,-20,-40),
+        (-30,  0, 10, 15, 15, 10,  0,-30),
+        (-30,  5, 15, 20, 20, 15,  5,-30),
+        (-30,  0, 15, 20, 20, 15,  0,-30),
+        (-30,  5, 10, 15, 15, 10,  5,-30),
+        (-40,-20,  0,  5,  5,  0,-20,-40),
+        (-50,-40,-30,-30,-30,-30,-40,-50)),
+
+    B: ((-20,-10,-10,-10,-10,-10,-10,-20),
+        (-10,  0,  0,  0,  0,  0,  0,-10),
+        (-10,  0,  5, 10, 10,  5,  0,-10),
+        (-10,  5,  5, 10, 10,  5,  5,-10),
+        (-10,  0, 10, 10, 10, 10,  0,-10),
+        (-10, 10, 10, 10, 10, 10, 10,-10),
+        (-10,  5,  0,  0,  0,  0,  5,-10),
+        (-20,-10,-10,-10,-10,-10,-10,-20)),
+
+    R: ((  0,  0,  0,  0,  0,  0,  0,  0),
+        (  5, 10, 10, 10, 10, 10, 10,  5),
+        ( -5,  0,  0,  0,  0,  0,  0, -5),
+        ( -5,  0,  0,  0,  0,  0,  0, -5),
+        ( -5,  0,  0,  0,  0,  0,  0, -5),
+        ( -5,  0,  0,  0,  0,  0,  0, -5),
+        ( -5,  0,  0,  0,  0,  0,  0, -5),
+        (  0,  0,  0,  5,  5,  0,  0,  0)),
+
+    Q: ((-20,-10,-10, -5, -5,-10,-10,-20),
+        (-10,  0,  0,  0,  0,  0,  0,-10),
+        (-10,  0,  5,  5,  5,  5,  0,-10),
+        ( -5,  0,  5,  5,  5,  5,  0, -5),
+        (  0,  0,  5,  5,  5,  5,  0, -5),
+        (-10,  5,  5,  5,  5,  5,  0,-10),
+        (-10,  0,  5,  0,  0,  0,  0,-10),
+        (-20,-10,-10, -5, -5,-10,-10,-20)),
+
+    K: ((-30,-40,-40,-50,-50,-40,-40,-30),
+        (-30,-40,-40,-50,-50,-40,-40,-30),
+        (-30,-40,-40,-50,-50,-40,-40,-30),
+        (-30,-40,-40,-50,-50,-40,-40,-30),
+        (-20,-30,-30,-40,-40,-30,-30,-20),
+        (-10,-20,-20,-20,-20,-20,-20,-10),
+        ( 20, 20,  0,  0,  0,  0, 20, 20),
+        ( 20, 30, 10,  0,  0, 10, 30, 20)), }
+    
+King_endgame = ((-50,-40,-30,-20,-20,-30,-40,-50),
+                (-30,-20,-10,  0,  0,-10,-20,-30),
+                (-30,-10, 20, 30, 30, 20,-10,-30),
+                (-30,-10, 30, 40, 40, 30,-10,-30),
+                (-30,-10, 30, 40, 40, 30,-10,-30),
+                (-30,-10, 20, 30, 30, 20,-10,-30),
+                (-30,-30,  0,  0,  0,  0,-30,-30),
+                (-50,-30,-30,-30,-30,-30,-30,-50),) 
+
+PIECE_SQUARE_VALUE = {
+    k | p: tuple((s + PIECE_VALUE[k]) * (1 if p == w else -1)
+        for r in (v if p == w else reversed(v))
+        for s in r + OFF_0x88_BOARD)
+    for k,v in PIECE_SQUARE_BONUS.items()
+    for p in COLOUR
+}
+
+PIECE_SQUARE_VALUE[0] = (0,) * 128
+
+board_t = List[int]
+class GameState(NamedTuple):
+    board: board_t
+    player: int
+    castle: int
+    ep: int
+    pawnmove: int
+    num_moves: int
+    last_moved_piece: int
+    captured_piece: int
+    moved_from_square: int
+    moved_to_square: int
+
 
 ENDC = '\033[0m'
 WHITE = '\033[38;5;0;48;5;15m'
@@ -154,6 +245,11 @@ def generate_new_state(state: GameState, from_square: int, to_square: int,
         pawnmove = 0
     else:
         pawnmove = state.pawnmove + 1
+    
+    captured_piece = new_board[to_square]
+    last_moved_piece = new_board[from_square]
+    moved_from_square = from_square
+    moved_to_square = to_square
 
     new_board[from_square], new_board[to_square] = 0, new_board[from_square]
 
@@ -188,7 +284,10 @@ def generate_new_state(state: GameState, from_square: int, to_square: int,
             new_castle &= ~bOOO
         if new_castle & bOO and new_board[7] != bR:
             new_castle &= ~bOO
-    return GameState(new_board, player, new_castle, ep_square, pawnmove, num_moves)
+
+    return GameState(new_board, player, new_castle, 
+        ep_square, pawnmove, num_moves, last_moved_piece, 
+        captured_piece, moved_from_square, moved_to_square)
 
 
 def generate_move_validation_state(state: GameState, new_squares: List[Tuple[int, int]]) -> GameState:
@@ -351,6 +450,166 @@ def move_generation(state: GameState) -> Dict[Tuple[int, ...], GameState]:
     return generated_moves
 
 
+searched = 0
+MATE = 2 * PIECE_VALUE[K]
+ALPHABETA = 99999999999999
+
+def search(state: GameState, depth: int, print_status: bool = False):
+    global searched
+    searched = 0
+    next_states = move_generation(state).values()
+    next_states = sorted(next_states, key=move_order_value, reverse=True)
+    move_scores = {}
+    alpha = -ALPHABETA
+    beta = ALPHABETA
+    num_moves = len(next_states)
+    best_move = None
+    for i, ns in enumerate(next_states):
+        if print_status:
+            print(f"\rThinking of move {i+1:>3}/{num_moves}, depth = {depth}", end= "")
+        score = alphabeta(ns, depth - 1, alpha, beta, ns.player == w)
+        # move_scores[score] = move_scores.get(score, []) + [ns]
+        if state.player == w:
+            if score > alpha:
+                alpha = score
+                best_move = ns
+        else:
+            if score < beta:
+                beta = score
+                best_move = ns
+        if print_status:
+            print(f", best score = {alpha if state.player == w else beta: <20}", end="")
+    if print_status:
+        print("\n")
+    print("Searched", searched)
+    
+    best_moves = move_scores.get(beta, [])
+    return best_move #random.choice(best_moves) if best_moves else None
+
+
+def move_order_value(state: GameState) -> int:
+    moved_piece = state.last_moved_piece
+    captured_piece = state.captured_piece
+    pos_matrix = PIECE_SQUARE_VALUE[moved_piece]
+    
+    improvement = abs(pos_matrix[state.moved_to_square] - pos_matrix[state.moved_from_square])
+    capture_value = PIECE_VALUE[captured_piece & ~PLAYER_BITS]
+    return improvement + capture_value
+
+
+def alphabeta(state, depth, alpha, beta, maximizingPlayer):
+    next_states = move_generation(state).values()
+    next_states = sorted(next_states, key=move_order_value, reverse=True)
+    if depth == 0 or len(next_states) == 0:
+        global searched
+        searched += 1
+        return evaluate(state, next_states, depth)
+
+    if maximizingPlayer:
+        value = -ALPHABETA
+        for ns in next_states:
+            value = max(value, alphabeta(ns, depth - 1, alpha, beta, False))
+            alpha = max(alpha, value)
+            if alpha >= beta: break
+        return value
+    else:
+        value = ALPHABETA
+        for ns in next_states:
+            value = min(value, alphabeta(ns, depth - 1, alpha, beta, True))
+            beta = min(beta, value)
+            if beta <= alpha: break
+        return value
+
+
+def evaluate(state: GameState, next_states, depth) -> int:
+    position_value = 0
+    other_player = state.player ^ PLAYER_BITS
+    # white_pawn_files = [0] * 8
+    # black_pawn_files = [0] * 8
+    if len(next_states) == 0:
+        king_square = None
+        for square in range(128):
+            if square & 0x88: continue 
+            piece = state.board[square]
+            if piece & K and piece & state.player: 
+                king_square = square
+                break
+        
+        # check by night.
+        for m in MOVE_VECTORS[wN]:
+            if king_square + m & 0x88: continue
+            nightmove = state.board[king_square + m]
+            if nightmove & N and nightmove & other_player:
+                return MATE * (-1 if state.player == w else 1) * depth
+        
+        for dir_one, dir_two in ((north+west, south+east), 
+                                 (north+east, south+west),
+                                 (north, south), 
+                                 (east, west),
+                                 (south+east, north+west), 
+                                 (south+west, north+east),
+                                 (south, north), 
+                                 (west, east)):
+            att_sqr = king_square
+            while True:
+                att_sqr += dir_one
+                if att_sqr & 0x88: break 
+                piece = state.board[att_sqr]
+                if piece & state.player: break
+                if piece & other_player:
+                    if piece & P: 
+                        if dir_one in (north, south, east, west): break
+                        if dir_two in MOVE_VECTORS[piece] and dir_two + att_sqr == king_square:
+                            return MATE * (-1 if state.player == w else 1)  * depth
+                    if piece & N: break
+                    if piece & K: break
+                    if dir_two in MOVE_VECTORS[piece]:
+                        return MATE * (-1 if state.player == w else 1)  * depth
+        # not mate
+        return 0                  
+
+    for square in range(128):
+        if square & 0x88: continue 
+        piece = state.board[square]
+        if piece == 0: continue
+        # if piece & P:
+        #     if piece & w:
+        #         white_pawn_files[square & 0b111] += 1
+        #     else:
+        #         black_pawn_files[square & 0b111] += 1
+        position_value += PIECE_SQUARE_VALUE[piece][square]
+
+    # # punish doubled pawns
+    # position_value -= sum(i for i in white_pawn_files if i > 1) * 20
+    # position_value += sum(i for i in black_pawn_files if i > 1) * 20
+
+    # # punish isolated pawns
+    # if white_pawn_files[0] > 0 and white_pawn_files[1] == 0:
+    #     position_value -= white_pawn_files[0] * 20
+    # if black_pawn_files[0] > 0 and black_pawn_files[1] == 0:
+    #     position_value += black_pawn_files[0] * 20
+    # if white_pawn_files[7] > 0 and white_pawn_files[6] == 0:
+    #     position_value -= white_pawn_files[7] * 20
+    # if black_pawn_files[7] > 0 and black_pawn_files[6] == 0:
+    #     position_value += black_pawn_files[7] * 20
+    # for i, j, k in zip(white_pawn_files, white_pawn_files[1:], white_pawn_files[2:]):
+    #     if i == 0 and j > 0 and k == 0:
+    #         position_value += i * 20
+    # for i, j, k in zip(black_pawn_files, black_pawn_files[1:], black_pawn_files[2:]):
+    #     if i == 0 and j > 0 and k == 0:
+    #         position_value += i * 20
+
+    # # punish blocked pawns
+
+    # # revard mobility
+    # position_value += len(move_generation(state).values()) * 2 * (
+    #     -1 if state.player & b else 1)
+    # other_side = state._replace(player=state.player^PLAYER_BITS)
+    # position_value += len(move_generation(other_side).values()) * 2 * (
+    #     1 if state.player & b else -1)
+    return position_value
+
+
 def parse_FEN(fen_string: str) -> GameState:
     board, player, castle, ep, *moves = fen_string.strip().split()
     if len(moves) < 2:
@@ -391,7 +650,7 @@ def parse_FEN(fen_string: str) -> GameState:
             castle_bin |= bOOO
         
     return GameState(parsed_board, w if player == "w" else b, 
-                 castle_bin, ep_square, pawnmove, num_moves)
+                 castle_bin, ep_square, pawnmove, num_moves, 0, 0, 0, 0)
 
 
 def to_fen(state: GameState) -> str:
@@ -400,13 +659,13 @@ def to_fen(state: GameState) -> str:
         num_empty = 0
         for c in range(8):
             piece = PIECE_ENCODING.get(state.board[r << 4 | c], "")
-            string_builder.append(piece)
             if piece:
                 if num_empty > 0:
                     string_builder.append(str(num_empty))
                     num_empty = 0
             else:
                 num_empty += 1
+            string_builder.append(piece)
         if num_empty > 0: 
             string_builder.append(str(num_empty))
         if r < 7:
@@ -460,12 +719,11 @@ def main(state: GameState) -> None:
             else:
                 print("Enter moves in from to square form. eg. e2e4, promotion append q b r n eg. e7e8q")
         draw_board(state.board)
-
-        moves = move_generation(state)
-        if not moves:
+        
+        state = search(state, 6, print_status=True)
+        if not state:
             print("You win :-)")
             break
-        state = random.choice(list(moves.values()))
 
 if __name__ == "__main__":
     import sys

@@ -1,137 +1,161 @@
 [
    {
+      
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":8,
       "fen":"r6r/1b2k1bq/8/8/7B/8/8/R3K2R b QK - 3 2"
    },
    {
-    "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
+      "type": "perf_test",
+      "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":8,
       "fen":"8/8/8/2k5/2pP4/8/B7/4K3 b - d3 5 3"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":19,
       "fen":"r1bqkbnr/pppppppp/n7/8/8/P7/1PPPPPPP/RNBQKBNR w QqKk - 2 2"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":5,
       "fen":"r3k2r/p1pp1pb1/bn2Qnp1/2qPN3/1p2P3/2N5/PPPBBPPP/R3K2R b QqKk - 3 2"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":44,
       "fen":"2kr3r/p1ppqpb1/bn2Qnp1/3PN3/1p2P3/2N5/PPPBBPPP/R3K2R b QK - 3 2"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":39,
       "fen":"rnb2k1r/pp1Pbppp/2p5/q7/2B5/8/PPPQNnPP/RNB1K2R w QK - 3 9"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":1,
       "nodes":9,
       "fen":"2r5/3pk3/8/2P5/8/2K5/8/8 w - - 5 4"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":3,
       "nodes":62379,
       "fen":"rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R w KQ - 1 8"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":3,
       "nodes":89890,
       "fen":"r4rk1/1pp1qppp/p1np1n2/2b1p1B1/2B1P1b1/P1NP1N2/1PP1QPPP/R4RK1 w - - 0 10"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":1134888,
       "fen":"3k4/3p4/8/K1P4r/8/8/8/8 b - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":1015133,
       "fen":"8/8/4k3/8/2p5/8/B2P2K1/8 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":1440467,
       "fen":"8/8/1k6/2b5/2pP4/8/5K2/8 b - d3 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":661072,
       "fen":"5k2/8/8/8/8/8/8/4K2R w K - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":803711,
       "fen":"3k4/8/8/8/8/8/8/R3K3 w Q - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":4,
       "nodes":1274206,
       "fen":"r3k2r/1b4bq/8/8/8/8/7B/R3K2R w KQkq - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":4,
       "nodes":1720476,
       "fen":"r3k2r/8/3Q4/8/8/5q2/8/R3K2R b KQkq - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":3821001,
       "fen":"2K2r2/4P3/8/8/8/8/8/3k4 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":5,
       "nodes":1004658,
       "fen":"8/8/1P2K3/8/2n5/1q6/8/5k2 b - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":217342,
       "fen":"4k3/1P6/8/8/8/8/K7/8 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":92683,
       "fen":"8/P1k5/K7/8/8/8/8/8 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":6,
       "nodes":2217,
       "fen":"K1k5/8/P7/8/8/8/8/8 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":7,
       "nodes":567584,
       "fen":"8/k1P5/8/1K6/8/8/8/8 w - - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://peterellisjones.com/posts/generating-legal-chess-moves-efficiently/",
       "depth":4,
       "nodes":23527,
@@ -140,45 +164,833 @@
 
 
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Initial_Position",
       "depth": 5,
       "nodes": 4865609,
       "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1 "
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_2",
       "depth": 4,
       "nodes": 4085603,
       "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - "
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_3",
       "depth": 6,
       "nodes": 11030083,
       "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - "
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_4",
       "depth": 4,
       "nodes": 422333,
       "fen": "r3k2r/Pppp1ppp/1b3nbN/nP6/BBP1P3/q4N2/Pp1P2PP/R2Q1RK1 w kq - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_4",
       "depth": 4,
       "nodes": 422333,
       "fen": "r2q1rk1/pP1p2pp/Q4n2/bbp1p3/Np6/1B3NBn/pPPP1PPP/R3K2R b KQ - 0 1"
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_5",
       "depth": 5,
       "nodes": 89941194,
       "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R w KQ - 1 8"
    },
    {
+      "type": "perf_test",
       "source": "https://www.chessprogramming.org/Perft_Results#Position_6",
       "depth": 4,
       "nodes": 3894594,
       "fen": "r4rk1/1pp1qppp/p1np1n2/2b1p1B1/2B1P1b1/P1NP1N2/1PP1QPPP/R4RK1 w - - 0 10"
+   },
+
+
+
+
+   {
+      "type": "tactics_test",
+      "source": "Sjakk og matt",
+      "name": "Juniorutfordring 01",
+      "depth": 4,
+      "fen": [
+         "6k1/6p1/p2p3p/2pPb3/P1P1Pr2/6qP/4Q1P1/4RN1K b - - 0 1",
+         "6k1/6p1/p2p3p/2pPb3/P1P1P3/6qP/6P1/4RQ1K b - - 0 2"
+      ],
+      "result": [
+         "6k1/6p1/p2p3p/2pPb3/P1P1P3/6qP/4Q1P1/4Rr1K w - - 0 2",
+         "6k1/6p1/p2p3p/2pPb3/P1P1P3/7P/6Pq/4RQ1K w - - 1 3"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Sjakk og matt",
+      "name": "Juniorutfordring 02",
+      "depth": 4,
+      "fen": [
+         "5r1k/3b2p1/3bq2p/4p3/P1PpB3/3P2N1/5r1P/R2Q2RK b - - 0 1",
+         "5r1k/3b2p1/3bq2p/4p3/P1PpB3/3P2N1/7K/R2Q2R1 b - - 0 2"
+      ],
+      "result": [
+         "5r1k/3b2p1/3bq2p/4p3/P1PpB3/3P2N1/7r/R2Q2RK w - - 0 2",
+         "5r1k/3b2p1/3b3p/4p3/P1PpB3/3P2Nq/7K/R2Q2R1 w - - 1 3"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Sjakk og matt",
+      "name": "Juniorutfordring 04",
+      "depth": 4,
+      "fen": [
+         "5rk1/4Qpp1/p6p/1p3N2/1Pn5/2P4P/2q2PP1/3R2K1 w - - 0 1",
+         "5k2/5pp1/p6p/1p3N2/1Pn5/2P4P/2q2PP1/3R2K1 w - - 0 2"
+      ],
+      "result": [
+         "5Qk1/5pp1/p6p/1p3N2/1Pn5/2P4P/2q2PP1/3R2K1 b - - 0 1",
+         "3R1k2/5pp1/p6p/1p3N2/1Pn5/2P4P/2q2PP1/6K1 b - - 1 2"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Sjakk og matt",
+      "name": "Mesterutfordring 01",
+      "depth": 8,
+      "fen": [
+         "5nk1/r4pp1/2pN3p/p1q5/Pn2Q3/2r4P/4RPP1/1B2R1K1 w - - 0 1",
+         "6k1/r4ppn/2pN3p/p1q5/Pn6/2r4P/4RPP1/1B2R1K1 w - - 0 2",
+         "4Rnk1/r4pp1/2pN3p/p1q5/Pn6/2r4P/5PP1/1B2R1K1 w - - 2 3",
+         "5k2/r4pp1/2pN3p/p1q5/Pn6/2r4P/5PP1/1B2R1K1 w - - 0 4"
+      ],
+      "result": [
+         "5nk1/r4ppQ/2pN3p/p1q5/Pn6/2r4P/4RPP1/1B2R1K1 b - - 1 1",
+         "4R1k1/r4ppn/2pN3p/p1q5/Pn6/2r4P/5PP1/1B2R1K1 b - - 1 2",
+         "5Rk1/r4pp1/2pN3p/p1q5/Pn6/2r4P/5PP1/1B2R1K1 b - - 0 3",
+         "4Rk2/r4pp1/2pN3p/p1q5/Pn6/2r4P/5PP1/1B4K1 b - - 1 4"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Sjakk og matt",
+      "name": "Mesterutfordring 02",
+      "depth": 8,
+      "fen": [
+         "k7/p6Q/1n2pb2/B2b2q1/3P4/P5PK/5r2/1RR5 w - - 0 1",
+         "k1n5/p6Q/4pb2/B2b2q1/3P4/P5PK/5r2/1R6 w - - 0 2",
+         "1kn5/p6Q/4pb2/B2b2q1/3P4/P5PK/5r2/8 w - - 0 3",
+         "k1n5/p1Q5/4pb2/B2b2q1/3P4/P5PK/5r2/8 w - - 2 4"
+      ],
+      "result": [
+         "k1R5/p6Q/1n2pb2/B2b2q1/3P4/P5PK/5r2/1R6 b - - 1 1",
+         "kRn5/p6Q/4pb2/B2b2q1/3P4/P5PK/5r2/8 b - - 1 2",
+         "1kn5/p1Q5/4pb2/B2b2q1/3P4/P5PK/5r2/8 b - - 1 3",
+         "k1Q5/p7/4pb2/B2b2q1/3P4/P5PK/5r2/8 b - - 0 4"
+      ]
+   },
+
+
+
+
+
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Forks and double attack 01",
+      "depth": 6,
+      "fen": [
+         "8/1b6/p6k/4p1p1/4P1Pp/3P1R1P/1b4K1/8 w - - 0 1",
+         "8/1b4k1/p4R2/4p1p1/4P1Pp/3P3P/1b4K1/8 w - - 2 2"
+      ],
+      "result": [
+         "8/1b6/p4R1k/4p1p1/4P1Pp/3P3P/1b4K1/8 b - - 1 1",
+         "8/1b4k1/pR6/4p1p1/4P1Pp/3P3P/1b4K1/8 b - - 3 2"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Forks and double attack 02",
+      "depth": 6,
+      "fen": [
+         "r2qk2r/ppp2ppp/2np4/8/3Pn3/2P1B3/PP2NPPP/R2QK2R w - - 0 2",
+         "r2qk2r/ppp2ppp/3p4/3Pn3/4n3/2P1B3/PP2NPPP/R2QK2R w - - 1 3"
+      ],
+      "result": [
+         "r2qk2r/ppp2ppp/2np4/3P4/4n3/2P1B3/PP2NPPP/R2QK2R b - - 0 2",
+         "r2qk2r/ppp2ppp/3p4/3Pn3/Q3n3/2P1B3/PP2NPPP/R3K2R b - - 2 3"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Forks and double attack 50",
+      "depth": 8,
+      "fen": [
+         "4r1k1/4r3/2p5/2Bp3p/3P1p1P/1Q6/8/7K b - - 0 117",
+         "4r1k1/8/2p5/2Bp3p/3P1p1P/1Q6/6K1/4r3 b - - 2 118",
+         "6k1/8/2p5/2Bp3p/3P1p1P/1Q3K2/4r3/4r3 b - - 4 119"
+      ],
+      "result": [
+         "4r1k1/8/2p5/2Bp3p/3P1p1P/1Q6/8/4r2K w - - 1 118",
+         "6k1/8/2p5/2Bp3p/3P1p1P/1Q6/4r1K1/4r3 w - - 3 119",
+         "6k1/8/2p5/2Bp3p/3P1p1P/1Q2rK2/8/4r3 w - - 5 120"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pins 01",
+      "depth": 4,
+      "fen": [
+         "1r6/5pbk/p5p1/3R4/8/2P3Pq/P1B1Q2P/6K1 w - - 0 4"
+      ],
+      "result": [
+         "1r6/5pbk/p5p1/7R/8/2P3Pq/P1B1Q2P/6K1 b - - 1 4"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pins 02",
+      "depth": 7,
+      "fen": [
+         "r1bk3r/pppn1pbp/5np1/4p1B1/2P1P3/2N5/PP3PPP/2KR1BNR w - - 0 4",
+         "r1b1k2r/pppn1pbp/5np1/3Np1B1/2P1P3/8/PP3PPP/2KR1BNR w - - 2 5"
+      ],
+      "result": [
+         "r1bk3r/pppn1pbp/5np1/3Np1B1/2P1P3/8/PP3PPP/2KR1BNR b - - 1 4",
+         "r1b1k2r/ppNn1pbp/5np1/4p1B1/2P1P3/8/PP3PPP/2KR1BNR b - - 0 5"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Deflecting/removing the guard 01",
+      "depth": 4,
+      "fen": [
+         "r1bk2r1/pppp1pBp/8/b2P4/2B4q/1Q6/PP3PP1/4R1K1 w - - 0 63",
+         "r1bk2r1/pppp1pBp/8/b2P4/2B5/6q1/PP3PP1/4R1K1 w - - 0 64"
+      ],
+      "result": [
+         "r1bk2r1/pppp1pBp/8/b2P4/2B4q/6Q1/PP3PP1/4R1K1 b - - 1 63",
+         "r1bk2r1/pppp1p1p/5B2/b2P4/2B5/6q1/PP3PP1/4R1K1 b - - 1 64"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Deflecting/removing the guard 02",
+      "depth": 4,
+      "fen": [
+         "r3n2k/1p4pp/2p5/1q5N/8/P6P/1Q3PP1/4R1K1 w - - 0 64",
+         "4r2k/1p4pp/2p5/1q5N/8/P6P/1Q3PP1/6K1 w - - 0 65"
+      ],
+      "result": [
+         "r3R2k/1p4pp/2p5/1q5N/8/P6P/1Q3PP1/6K1 b - - 0 64",
+         "4r2k/1p4Qp/2p5/1q5N/8/P6P/5PP1/6K1 b - - 0 65"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Discoveries 01",
+      "depth": 6,
+      "fen": [
+         "1rk5/3p1r2/2p5/4P3/2n5/6B1/4R3/1R4K1 w - - 0 134",
+         "1k6/3p1r2/2p5/4P3/2n5/6B1/4R3/6K1 w - - 0 135",
+         "2k5/3p1r2/2p1P3/8/2n5/6B1/4R3/6K1 w - - 1 136"
+      ],
+      "result": [
+         "1Rk5/3p1r2/2p5/4P3/2n5/6B1/4R3/6K1 b - - 0 134",
+         "1k6/3p1r2/2p1P3/8/2n5/6B1/4R3/6K1 b - - 0 135",
+         "2k5/3p1P2/2p5/8/2n5/6B1/4R3/6K1 b - - 0 136"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Discoveries 02",
+      "depth": 6,
+      "fen": [
+         "6k1/5pp1/1prq1b1p/r2p4/3P4/n1NNPQ1P/2R2PP1/2R3K1 w - - 0 136",
+         "6k1/5pp1/1prq1b1p/1r1p4/3P4/n2NPQ1P/2R2PP1/2R3K1 w - - 0 137"
+      ],
+      "result": [
+         "6k1/5pp1/1prq1b1p/rN1p4/3P4/n2NPQ1P/2R2PP1/2R3K1 b - - 1 136",
+         "6k1/5pp1/1pRq1b1p/1r1p4/3P4/n2NPQ1P/5PP1/2R3K1 b - - 0 137"
+      ]
+   },
+
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Double check 01",
+      "depth": 6,
+      "fen": [
+         "r4knr/pp1b2pp/2p5/2b4q/3pPB2/3Q4/PPP3PP/RN3RK1 w - - 0 180",
+         "r3k1nr/pp1b2pp/2pB4/2b4q/3pP3/3Q4/PPP3PP/RN3RK1 w - - 2 181"
+      ],
+      "result": [
+         "r4knr/pp1b2pp/2pB4/2b4q/3pP3/3Q4/PPP3PP/RN3RK1 b - - 1 180",
+         "r3kRnr/pp1b2pp/2pB4/2b4q/3pP3/3Q4/PPP3PP/RN4K1 b - - 3 181"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Double check 02",
+      "depth": 6,
+      "fen": [
+         "r3kbnr/pb1n1Npp/1pq5/2pNp2Q/8/4B3/PPP2PPP/R4RK1 w - - 0 181",
+         "r2k1bnr/pb1n2pp/1pqN4/2pNp2Q/8/4B3/PPP2PPP/R4RK1 w - - 2 182"
+      ],
+      "result": [
+         "r3kbnr/pb1n2pp/1pqN4/2pNp2Q/8/4B3/PPP2PPP/R4RK1 b - - 1 181",
+         "r2kQbnr/pb1n2pp/1pqN4/2pNp3/8/4B3/PPP2PPP/R4RK1 b - - 3 182"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Skewers 01",
+      "depth": 6,
+      "fen": [
+         "3r4/5pk1/R4b2/1p5p/1P4p1/4P1B1/2r2PP1/R5K1 w - - 0 216",
+         "3r4/5p2/5k2/1p5p/1P4p1/4P1B1/2r2PP1/R5K1 w - - 0 217",
+         "3r4/5p2/8/1p2k2p/1P4pB/4P3/2r2PP1/R5K1 w - - 2 218"
+      ],
+      "result": [
+         "3r4/5pk1/5R2/1p5p/1P4p1/4P1B1/2r2PP1/R5K1 b - - 0 216",
+         "3r4/5p2/5k2/1p5p/1P4pB/4P3/2r2PP1/R5K1 b - - 1 217",
+         "3B4/5p2/8/1p2k2p/1P4p1/4P3/2r2PP1/R5K1 b - - 0 218"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Skewers 02",
+      "depth": 6,
+      "fen": [
+         "1rbq1rk1/1pb2ppp/p7/2nN4/4p3/6P1/PPP1QPBP/R1B2RK1 w - - 0 218",
+         "1rb2rk1/1pq2ppp/p7/2n5/4p3/6P1/PPP1QPBP/R1B2RK1 w - - 0 219"
+      ],
+      "result": [
+         "1rbq1rk1/1pN2ppp/p7/2n5/4p3/6P1/PPP1QPBP/R1B2RK1 b - - 0 218",
+         "1rb2rk1/1pq2ppp/p7/2n5/4pB2/6P1/PPP1QPBP/R4RK1 b - - 1 219"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Trapping pieces 01",
+      "depth": 6,
+      "fen": [
+         "rnbqk2r/ppp1nppp/3b4/3p4/2PP4/5N2/PP3PPP/RNBQKB1R w - - 0 268"
+      ],
+      "result": [
+         "rnbqk2r/ppp1nppp/3b4/2Pp4/3P4/5N2/PP3PPP/RNBQKB1R b - - 0 268"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Trapping pieces 02",
+      "depth": 6,
+      "fen": [
+         "r4r1k/1pp2pbp/p1n3p1/5P2/2P5/1P2B1P1/P1N3KP/3R1R2 w - - 0 268"
+      ],
+      "result": [
+         "r4r1k/1pp2pbp/p1n2Pp1/8/2P5/1P2B1P1/P1N3KP/3R1R2 b - - 0 268"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Trapping pieces 03",
+      "depth": 6,
+      "fen": [
+         "r4rk1/5ppp/n2Qp3/p2pP1B1/P2P4/5P2/4q1PP/2RR2K1 w - - 0 268"
+      ],
+      "result": [
+         "r4rk1/5ppp/n2Qp3/p2pP1B1/P2P4/5P2/3Rq1PP/2R3K1 b - - 1 268"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Trapping pieces 04",
+      "depth": 6,
+      "fen": [
+         "6nr/7p/2k2K2/1p1p4/3P4/2P5/P7/3R4 w - - 0 268"
+      ],
+      "result": [
+         "6nr/6Kp/2k5/1p1p4/3P4/2P5/P7/3R4 b - - 1 268"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Trapping pieces 05",
+      "depth": 6,
+      "fen": [
+         "r4rk1/pb1q1pbp/2Rpp1p1/1B1P2B1/4P3/Pp5P/1P1KQPP1/3R4 w - - 0 268",
+         "r4rk1/p2q1pbp/b2pp1p1/1B1P2B1/4P3/Pp5P/1P1KQPP1/2RR4 w - - 2 269",
+         "r4rk1/p2B1pbp/3pp1p1/3P2B1/4P3/Pp5P/1P1KbPP1/2RR4 w - - 0 270"
+      ],
+      "result": [
+         "r4rk1/pb1q1pbp/3pp1p1/1B1P2B1/4P3/Pp5P/1P1KQPP1/2RR4 b - - 1 268",
+         "r4rk1/p2B1pbp/b2pp1p1/3P2B1/4P3/Pp5P/1P1KQPP1/2RR4 b - - 0 269",
+         "r4rk1/p2B1pbp/3pp1p1/3P2B1/4P3/Pp5P/1P2KPP1/2RR4 b - - 0 270"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Decoys 01",
+      "depth": 6,
+      "fen": [
+         "r2r3k/pppbn1pp/2np4/2P5/5q2/1BB3N1/PPQ2PP1/R4R1K w - - 0 296",
+         "r2r4/pppbn1kp/2np4/2P5/5q2/1B4N1/PPQ2PP1/R4R1K w - - 0 297",
+         "r2r3k/pppbn2p/2np4/2P4N/5q2/1B6/PPQ2PP1/R4R1K w - - 2 298"
+      ],
+      "result": [
+         "r2r3k/pppbn1Bp/2np4/2P5/5q2/1B4N1/PPQ2PP1/R4R1K b - - 0 296",
+         "r2r4/pppbn1kp/2np4/2P4N/5q2/1B6/PPQ2PP1/R4R1K b - - 1 297",
+         "r2r3k/pppbn2p/2np4/2P5/5N2/1B6/PPQ2PP1/R4R1K b - - 0 298"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Decoys 02",
+      "depth": 6,
+      "fen": [
+         "1Q4rk/7p/6p1/3N4/3pq3/6Pb/1P3P2/3R2K1 w - - 0 298",
+         "6k1/7p/6p1/3N4/3pq3/6Pb/1P3P2/3R2K1 w - - 0 299",
+         "8/6kp/5Np1/8/3pq3/6Pb/1P3P2/3R2K1 w - - 2 300"
+      ],
+      "result": [
+         "6Qk/7p/6p1/3N4/3pq3/6Pb/1P3P2/3R2K1 b - - 0 298",
+         "6k1/7p/5Np1/8/3pq3/6Pb/1P3P2/3R2K1 b - - 1 299",
+         "8/6kp/6p1/8/3pN3/6Pb/1P3P2/3R2K1 b - - 0 300"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Decoys 03",
+      "depth": 6,
+      "fen": [
+         "3k4/3p4/3N1K2/7q/8/2B3P1/3P4/8 w - - 0 300",
+         "3k4/3p4/3N1K2/q7/8/6P1/3P4/8 w - - 0 301",
+         "8/1Nkp4/5K2/q7/8/6P1/3P4/8 w - - 2 302"
+      ],
+      "result": [
+         "3k4/3p4/3N1K2/B6q/8/6P1/3P4/8 b - - 1 300",
+         "3k4/1N1p4/5K2/q7/8/6P1/3P4/8 b - - 1 301",
+         "8/2kp4/5K2/N7/8/6P1/3P4/8 b - - 0 302"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Intermediate move 01",
+      "depth": 6,
+      "fen": [
+         "5k2/1p1q2p1/p2p2p1/n2Nb2p/8/1PB4P/P5P1/Q5K1 w - - 0 1",
+         "5k2/1p4p1/p2p2p1/n2Nbq1p/8/1PB4P/P5P1/5QK1 w - - 2 2",
+         "5k2/1p4p1/p2p4/n2Nbp1p/8/1PB4P/P5P1/6K1 w - - 0 3"
+      ],
+      "result": [
+         "5k2/1p1q2p1/p2p2p1/n2Nb2p/8/1PB4P/P5P1/5QK1 b - - 1 1",
+         "5k2/1p4p1/p2p2p1/n2NbQ1p/8/1PB4P/P5P1/6K1 b - - 0 2",
+         "5k2/1p4p1/p2p4/B2Nbp1p/8/1P5P/P5P1/6K1 b - - 0 3"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Intermediate move 02",
+      "depth": 6,
+      "fen": [
+         "3r1rk1/p3bpp1/1q1p3p/8/4P3/1QN2P2/P5PP/3R1R1K w - - 0 3",
+         "3r1rk1/p3bpp1/3p3p/3N4/4P3/1q3P2/P5PP/3R1R1K w - - 0 4",
+         "3r1r1k/p3Npp1/3p3p/8/4P3/1q3P2/P5PP/3R1R1K w - - 1 5"
+      ],
+      "result": [
+         "3r1rk1/p3bpp1/1q1p3p/3N4/4P3/1Q3P2/P5PP/3R1R1K b - - 1 3",
+         "3r1rk1/p3Npp1/3p3p/8/4P3/1q3P2/P5PP/3R1R1K b - - 0 4",
+         "3r1r1k/p3Npp1/3p3p/8/4P3/1P3P2/6PP/3R1R1K b - - 0 5"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pawn promotion 01",
+      "depth": 6,
+      "fen": [
+         "3r1n1k/5p1P/p5pQ/8/2q5/P7/5PPR/6K1 w - - 0 53",
+         "3r1n2/5pkP/p5p1/8/2q5/P7/5PPR/6K1 w - - 0 54"
+      ],
+      "result": [
+         "3r1n1k/5pQP/p5p1/8/2q5/P7/5PPR/6K1 b - - 1 53",
+         "3r1n1Q/5pk1/p5p1/8/2q5/P7/5PPR/6K1 b - - 0 54"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pawn promotion 02",
+      "depth": 6,
+      "fen": [
+         "4n3/P2k4/2b2p1p/5Pp1/6P1/6KP/8/2R5 w - - 0 54",
+         "4n3/P7/2k2p1p/5Pp1/6P1/6KP/8/8 w - - 0 55"
+      ],
+      "result": [
+         "4n3/P2k4/2R2p1p/5Pp1/6P1/6KP/8/8 b - - 0 54",
+         "Q3n3/8/2k2p1p/5Pp1/6P1/6KP/8/8 b - - 0 55"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pawn promotion 03",
+      "depth": 6,
+      "fen": [
+         "2b3k1/pp2q1p1/2prP2p/5p2/1Q1p1P2/P7/BP4PP/5RK1 w - - 0 55",
+         "2b3k1/pp4p1/2pqP2p/5p2/3p1P2/P7/BP4PP/5RK1 w - - 0 56",
+         "2b5/pp2P1pk/2pq3p/5p2/3p1P2/P7/BP4PP/5RK1 w - - 1 57"
+      ],
+      "result": [
+         "2b3k1/pp2q1p1/2pQP2p/5p2/3p1P2/P7/BP4PP/5RK1 b - - 0 55",
+         "2b3k1/pp2P1p1/2pq3p/5p2/3p1P2/P7/BP4PP/5RK1 b - - 0 56",
+         "2b1Q3/pp4pk/2pq3p/5p2/3p1P2/P7/BP4PP/5RK1 b - - 0 57"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Pawn promotion 04",
+      "depth": 6,
+      "fen": [
+         "6k1/1Q3pp1/p6p/3P3q/N2b4/1P2p1P1/P5PP/2R3K1 b - - 0 57",
+         "6k1/1Q3pp1/p6p/3P4/N2b4/1P2p1P1/P5PP/3R2K1 b - - 0 58",
+         "6k1/1Q3pp1/p6p/3P4/N2b4/1P4P1/P3p1PP/3R3K b - - 1 59"
+      ],
+      "result": [
+         "6k1/1Q3pp1/p6p/3P4/N2b4/1P2p1P1/P5PP/2Rq2K1 w - - 1 58",
+         "6k1/1Q3pp1/p6p/3P4/N2b4/1P4P1/P3p1PP/3R2K1 w - - 0 59",
+         "6k1/1Q3pp1/p6p/3P4/N2b4/1P4P1/P5PP/3q3K w - - 0 60"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "The back-rank problem 01",
+      "depth": 6,
+      "fen": [
+         "7k/1r2bp1p/4bqpQ/p7/8/P4P2/1P4P1/1K1RR3 w - - 0 105",
+         "3b3k/1r3p1p/4bqpQ/p7/8/P4P2/1P4P1/1K2R3 w - - 0 106"
+      ],
+      "result": [
+         "3R3k/1r2bp1p/4bqpQ/p7/8/P4P2/1P4P1/1K2R3 b - - 1 105",
+         "3b1Q1k/1r3p1p/4bqp1/p7/8/P4P2/1P4P1/1K2R3 b - - 1 106"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "The back-rank problem 02",
+      "depth": 6,
+      "fen": [
+         "kb2R3/pr6/6p1/3Q1n2/2P5/1Pq2N2/K5P1/8 w - - 0 106",
+         "1k6/pr6/6p1/3Q1n2/2P5/1Pq2N2/K5P1/8 w - - 0 107"
+      ],
+      "result": [
+         "kR6/pr6/6p1/3Q1n2/2P5/1Pq2N2/K5P1/8 b - - 0 106",
+         "1k1Q4/pr6/6p1/5n2/2P5/1Pq2N2/K5P1/8 b - - 1 107"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "The back-rank problem 04",
+      "depth": 6,
+      "fen": [
+         "4q2k/5ppp/2N5/pp6/8/1PR5/P4PPP/6K1 w - - 0 109",
+         "4q2k/4Np1p/6p1/pp6/8/1PR5/P4PPP/6K1 w - - 0 110"
+      ],
+      "result": [
+         "4q2k/4Nppp/8/pp6/8/1PR5/P4PPP/6K1 b - - 1 109",
+         "2R1q2k/4Np1p/6p1/pp6/8/1P6/P4PPP/6K1 b - - 1 110"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Destroying the castled king's defences 01",
+      "depth": 6,
+      "fen": [
+         "3rr2k/p2q2pp/1pp2p2/2b5/7R/1BP4P/PP2QPP1/R5K1 w - - 0 152",
+         "3rr3/p2q2pk/1pp2p2/2b5/8/1BP4P/PP2QPP1/R5K1 w - - 0 153"
+      ],
+      "result": [
+         "3rr2k/p2q2pR/1pp2p2/2b5/8/1BP4P/PP2QPP1/R5K1 b - - 0 152",
+         "3rr3/p2q2pk/1pp2p2/2b4Q/8/1BP4P/PP3PP1/R5K1 b - - 1 153"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Destroying the castled king's defences 02",
+      "depth": 6,
+      "fen": [
+         "1r3rk1/5ppp/1P6/5PQ1/8/8/6PP/6K1 w - - 0 153",
+         "1r3rk1/5p1p/1P3Pp1/6Q1/8/8/6PP/6K1 w - - 0 154"
+      ],
+      "result": [
+         "1r3rk1/5ppp/1P3P2/6Q1/8/8/6PP/6K1 b - - 0 153",
+         "1r3rk1/5p1p/1P3PpQ/8/8/8/6PP/6K1 b - - 1 154"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Destroying the castled king's defences 03",
+      "depth": 6,
+      "fen": [
+         "2r2rk1/5p2/pq2pBp1/1p5p/3P3R/2N2P2/PP3PK1/7R w - - 0 154",
+         "2r2rk1/5p2/pq2pB2/1p5p/3P4/2N2P2/PP3PK1/7R w - - 0 155"
+      ],
+      "result": [
+         "2r2rk1/5p2/pq2pBp1/1p5R/3P4/2N2P2/PP3PK1/7R b - - 0 154",
+         "2r2rk1/5p2/pq2pB2/1p5R/3P4/2N2P2/PP3PK1/8 b - - 0 155"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Destroying the castled king's defences 21",
+      "depth": 6,
+      "fen": [
+         "3q1rrk/1p2bpp1/p6p/4p2Q/3NP3/P2P3R/1P4PP/R6K w - - 0 178",
+         "3q1rrk/1p2bp2/p6p/4p3/3NP3/P2P3R/1P4PP/R6K w - - 0 179",
+         "3q1rr1/1p2bpk1/p6R/4p3/3NP3/P2P4/1P4PP/R6K w - - 1 180"
+      ],
+      "result": [
+         "3q1rrk/1p2bpp1/p6Q/4p3/3NP3/P2P3R/1P4PP/R6K b - - 0 178",
+         "3q1rrk/1p2bp2/p6R/4p3/3NP3/P2P4/1P4PP/R6K b - - 0 179",
+         "3q1rr1/1p2bpk1/p6R/4pN2/4P3/P2P4/1P4PP/R6K b - - 2 180"
+      ]
+   },
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "King chase 01",
+      "depth": 4,
+      "fen": [
+         "5b2/7Q/1q5p/4p1k1/6B1/7P/1r3PK1/8 w - - 0 186",
+         "5b2/8/1q5p/4pQ2/6Bk/7P/1r3PK1/8 w - - 2 187"
+      ],
+      "result": [
+         "5b2/8/1q5p/4pQk1/6B1/7P/1r3PK1/8 b - - 1 186",
+         "5b2/8/1q5p/4p2Q/6Bk/7P/1r3PK1/8 b - - 3 187"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "King chase 02",
+      "depth": 6,
+      "fen": [
+         "r1bBkb1r/ppp2p2/2n4p/3p4/3Pn3/4Pp2/PPP3PP/R2QKB1R b - - 0 187",
+         "r1bBkb1r/ppp2p2/2n4p/3p4/3Pn3/4P3/PPP1KpPP/R2Q1B1R b - - 1 188",
+         "r2Bkb1r/ppp2p2/2n4p/3p4/3Pn1b1/3KP3/PPP2pPP/R2Q1B1R b - - 3 189"
+      ],
+      "result": [
+         "r1bBkb1r/ppp2p2/2n4p/3p4/3Pn3/4P3/PPP2pPP/R2QKB1R w - - 0 188",
+         "r2Bkb1r/ppp2p2/2n4p/3p4/3Pn1b1/4P3/PPP1KpPP/R2Q1B1R w - - 2 189",
+         "r2Bkb1r/ppp2p2/7p/3p4/1n1Pn1b1/3KP3/PPP2pPP/R2Q1B1R w - - 4 190"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "King chase 20",
+      "depth": 8,
+      "fen": [
+         "2r5/pp4p1/1b2p1kp/nB1pP1p1/3P4/1PP2R2/P3KPP1/8 w - - 0 225",
+         "2r5/pp4p1/1b2p2p/n2pP1pk/3P4/1PPB1R2/P3KPP1/8 w - - 2 226",
+         "2r5/pp4p1/1b2p2p/n2pP1p1/3P2k1/1PPB3R/P3KPP1/8 w - - 4 227",
+         "2r5/pp4p1/1b2p2p/n2pP1p1/3P1k2/1PPB1P1R/P3K1P1/8 w - - 1 228"
+      ],
+      "result": [
+         "2r5/pp4p1/1b2p1kp/n2pP1p1/3P4/1PPB1R2/P3KPP1/8 b - - 1 225",
+         "2r5/pp4p1/1b2p2p/n2pP1pk/3P4/1PPB3R/P3KPP1/8 b - - 3 226",
+         "2r5/pp4p1/1b2p2p/n2pP1p1/3P2k1/1PPB1P1R/P3K1P1/8 b - - 0 227",
+         "2r5/pp4p1/1b2p2p/n2pP1p1/3P1k2/1PPB1PPR/P3K3/8 b - - 0 228"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "King chase 24",
+      "depth": 8,
+      "fen": [
+         "2r2r2/1p1bqpkp/4pNp1/1p2P3/2R5/3B4/1P3PPP/2Q3K1 w - - 0 240",
+         "2r2r2/1p1bqp1p/4pNpk/1p2P3/2R5/3B4/1P3PPP/6K1 w - - 0 241",
+         "2r2r2/1p1bqpkp/4pNp1/1p2P3/7R/3B4/1P3PPP/6K1 w - - 2 242"
+      ],
+      "result": [
+         "2r2r2/1p1bqpkp/4pNpQ/1p2P3/2R5/3B4/1P3PPP/6K1 b - - 1 240",
+         "2r2r2/1p1bqp1p/4pNpk/1p2P3/7R/3B4/1P3PPP/6K1 b - - 1 241",
+         "2r2r2/1p1bqpkR/4pNp1/1p2P3/8/3B4/1P3PPP/6K1 b - - 0 242"
+      ]
+   },
+
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Mixed checkmates in three moves 01",
+      "depth": 6,
+      "fen": [
+         "5r2/r3Npkp/3pnNP1/4p3/1p2PP2/8/PP2b1P1/1K5R w - - 0 41",
+         "4r3/r3Npkp/3pn1P1/4p3/1p2PP2/8/PP2b1P1/1K5R w - - 0 42",
+         "4rk2/r3Np1R/3pn1P1/4p3/1p2PP2/8/PP2b1P1/1K6 w - - 1 43"
+      ],
+      "result": [
+         "4Nr2/r3Npkp/3pn1P1/4p3/1p2PP2/8/PP2b1P1/1K5R b - - 1 41",
+         "4r3/r3NpkR/3pn1P1/4p3/1p2PP2/8/PP2b1P1/1K6 b - - 0 42",
+         "4rk2/r3NR2/3pn1P1/4p3/1p2PP2/8/PP2b1P1/1K6 b - - 0 43"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Mixed checkmates in three moves 02",
+      "depth": 6,
+      "fen": [
+         "6r1/6b1/1R2K2k/2q4p/4QP2/p7/P4N2/8 w - - 0 43",
+         "6r1/5Kb1/1q5k/7p/4QP2/p7/P4N2/8 w - - 0 44",
+         "6r1/5Kb1/1q5k/8/4QPp1/p7/P7/8 w - - 0 45"
+      ],
+      "result": [
+         "6r1/5Kb1/1R5k/2q4p/4QP2/p7/P4N2/8 b - - 1 43",
+         "6r1/5Kb1/1q5k/7p/4QPN1/p7/P7/8 b - - 1 44",
+         "6r1/5Kb1/1q5k/8/5Pp1/p7/P7/7Q b - - 1 45"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Mixed checkmates in three moves 03",
+      "depth": 6,
+      "fen": [
+         "3q1r1k/4Rppp/1p5n/1Ppb2N1/1n3P2/2Q5/2B3PP/2B4K w - - 0 45",
+         "3q1r2/4Rpkp/1p5n/1Ppb2N1/1n3P2/8/2B3PP/2B4K w - - 0 46",
+         "3q1rk1/4Rp1p/1p5n/1Ppb2N1/1n3P2/8/1BB3PP/7K w - - 2 47"
+      ],
+      "result": [
+         "3q1r1k/4RpQp/1p5n/1Ppb2N1/1n3P2/8/2B3PP/2B4K b - - 0 45",
+         "3q1r2/4Rpkp/1p5n/1Ppb2N1/1n3P2/8/1BB3PP/7K b - - 1 46",
+         "3q1rk1/4Rp1B/1p5n/1Ppb2N1/1n3P2/8/1B4PP/7K b - - 0 47"
+      ]
+   },
+
+
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Game-saving combinations 01",
+      "depth": 8,
+      "fen": [
+         "6k1/5p1p/4p1p1/8/2q5/1NP2PBP/1P4PK/5R2 w - - 0 161"
+      ],
+      "result": [
+         "6k1/5p1p/4p1p1/8/2q5/2P2PBP/1P1N2PK/5R2 b - - 1 161"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Game-saving combinations 02",
+      "depth": 6,
+      "fen": [
+         "3r3k/pp3p2/n1p5/q1n1P1Q1/2PNB3/1PN5/PK3P1P/8 b - - 0 161",
+         "3r3k/pp3p2/n1p5/2n1P1Q1/2PNB3/1PK5/P4P1P/8 b - - 0 162"
+      ],
+      "result": [
+         "3r3k/pp3p2/n1p5/2n1P1Q1/2PNB3/1Pq5/PK3P1P/8 w - - 0 162",
+         "3r3k/pp3p2/n1p5/4P1Q1/2PNn3/1PK5/P4P1P/8 w - - 0 163"
+      ]
+   },
+   {
+      "type": "tactics_test",
+      "source": "Susan Polgar Chess tactics for champions",
+      "name": "Game-saving combinations 03",
+      "depth": 7,
+      "fen": [
+         "8/p5pk/1p5r/3p1q2/6n1/P2B1P2/2P3P1/2Q3K1 b - - 0 163",
+         "8/p5pk/1p6/3p1q2/6n1/P2B1P2/2P3P1/2Q4K b - - 0 164",
+         "8/p5pk/1p6/3p1q2/8/P2B1P2/2P2nPK/2Q5 b - - 2 165",
+         "8/p5pk/1p6/3p1q2/8/P2P1P2/6PK/2Q5 b - - 0 166"
+      ],
+      "result": [
+         "8/p5pk/1p6/3p1q2/6n1/P2B1P2/2P3P1/2Q3Kr w - - 1 164",
+         "8/p5pk/1p6/3p1q2/8/P2B1P2/2P2nP1/2Q4K w - - 1 165",
+         "8/p5pk/1p6/3p1q2/8/P2n1P2/2P3PK/2Q5 w - - 0 166",
+         "8/p5pk/1p6/3p4/8/P2q1P2/6PK/2Q5 w - - 0 167"
+      ]
+   },
+
+
+
+
+   {
+      "type": "tactics_test",
+      "source": "Thematic Tactics: Endgame Checkmates",
+      "name": "3. Rook and Bishop endings, Paravyan, David(2528) vs. Bartel, Michal(2357)",
+      "depth": 10,
+      "fen": [
+         "8/4R3/p1b3kp/4Bpp1/2r2P2/7P/6P1/6K1 w - - 0 1",
+         "8/4R3/p1b3kp/4B1p1/2r2Pp1/7P/8/6K1 w - - 0 2",
+         "8/4R3/p1b3k1/4B1pp/2r2PP1/8/8/6K1 w - - 0 3",
+         "8/6R1/p1b4k/4B1pp/2r2PP1/8/8/6K1 w - - 2 4"
+      ],
+      "result": [
+         "8/4R3/p1b3kp/4Bpp1/2r2PP1/7P/8/6K1 b - g3 0 1",
+         "8/4R3/p1b3kp/4B1p1/2r2PP1/8/8/6K1 b - - 0 2",
+         "8/6R1/p1b3k1/4B1pp/2r2PP1/8/8/6K1 b - - 1 3",
+         "8/6R1/p1b4k/4B1Pp/2r3P1/8/8/6K1 b - - 0 4"
+      ]
    }
+
+
+
+
+
+
 ]
