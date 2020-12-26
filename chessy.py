@@ -457,9 +457,9 @@ ALPHABETA = 99999999999999
 def search(state: GameState, depth: int, print_status: bool = False):
     global searched
     searched = 0
-    next_states = move_generation(state).values()
-    next_states = sorted(next_states, key=move_order_value, reverse=True)
-    move_scores = {}
+    next_states: List[GameState] = sorted(move_generation(state).values(), 
+                         key=move_order_value, reverse=True)
+    # move_scores = {}
     alpha = -ALPHABETA
     beta = ALPHABETA
     num_moves = len(next_states)
@@ -483,7 +483,7 @@ def search(state: GameState, depth: int, print_status: bool = False):
         print("\n")
     print("Searched", searched)
     
-    best_moves = move_scores.get(beta, [])
+    # best_moves = move_scores.get(beta, [])
     return best_move #random.choice(best_moves) if best_moves else None
 
 
@@ -520,14 +520,15 @@ def alphabeta(state, depth, alpha, beta, maximizingPlayer):
             if beta <= alpha: break
         return value
 
-
+MOBILITY_SCORE = PIECE_VALUE[P] // 10
+PAWN_PUNISH = PIECE_VALUE[P] // 2
 def evaluate(state: GameState, next_states, depth) -> int:
     position_value = 0
     other_player = state.player ^ PLAYER_BITS
-    # white_pawn_files = [0] * 8
-    # black_pawn_files = [0] * 8
+    white_pawn_files = [0] * 8
+    black_pawn_files = [0] * 8
     if len(next_states) == 0:
-        king_square = None
+        king_square = 0
         for square in range(128):
             if square & 0x88: continue 
             piece = state.board[square]
@@ -572,41 +573,41 @@ def evaluate(state: GameState, next_states, depth) -> int:
         if square & 0x88: continue 
         piece = state.board[square]
         if piece == 0: continue
-        # if piece & P:
-        #     if piece & w:
-        #         white_pawn_files[square & 0b111] += 1
-        #     else:
-        #         black_pawn_files[square & 0b111] += 1
+        if piece & P:
+            if piece & w:
+                white_pawn_files[square & 0b111] += 1
+            else:
+                black_pawn_files[square & 0b111] += 1
         position_value += PIECE_SQUARE_VALUE[piece][square]
 
-    # # punish doubled pawns
-    # position_value -= sum(i for i in white_pawn_files if i > 1) * 20
-    # position_value += sum(i for i in black_pawn_files if i > 1) * 20
+    # punish doubled pawns
+    position_value -= sum(i for i in white_pawn_files if i > 1) * PAWN_PUNISH
+    position_value += sum(i for i in black_pawn_files if i > 1) * PAWN_PUNISH
 
-    # # punish isolated pawns
-    # if white_pawn_files[0] > 0 and white_pawn_files[1] == 0:
-    #     position_value -= white_pawn_files[0] * 20
-    # if black_pawn_files[0] > 0 and black_pawn_files[1] == 0:
-    #     position_value += black_pawn_files[0] * 20
-    # if white_pawn_files[7] > 0 and white_pawn_files[6] == 0:
-    #     position_value -= white_pawn_files[7] * 20
-    # if black_pawn_files[7] > 0 and black_pawn_files[6] == 0:
-    #     position_value += black_pawn_files[7] * 20
-    # for i, j, k in zip(white_pawn_files, white_pawn_files[1:], white_pawn_files[2:]):
-    #     if i == 0 and j > 0 and k == 0:
-    #         position_value += i * 20
-    # for i, j, k in zip(black_pawn_files, black_pawn_files[1:], black_pawn_files[2:]):
-    #     if i == 0 and j > 0 and k == 0:
-    #         position_value += i * 20
+    # punish isolated pawns
+    if white_pawn_files[0] > 0 and white_pawn_files[1] == 0:
+        position_value -= white_pawn_files[0] * PAWN_PUNISH
+    if black_pawn_files[0] > 0 and black_pawn_files[1] == 0:
+        position_value += black_pawn_files[0] * PAWN_PUNISH
+    if white_pawn_files[7] > 0 and white_pawn_files[6] == 0:
+        position_value -= white_pawn_files[7] * PAWN_PUNISH
+    if black_pawn_files[7] > 0 and black_pawn_files[6] == 0:
+        position_value += black_pawn_files[7] * PAWN_PUNISH
+    for i, j, k in zip(white_pawn_files, white_pawn_files[1:], white_pawn_files[2:]):
+        if i == 0 and j > 0 and k == 0:
+            position_value += i * PAWN_PUNISH
+    for i, j, k in zip(black_pawn_files, black_pawn_files[1:], black_pawn_files[2:]):
+        if i == 0 and j > 0 and k == 0:
+            position_value += i * PAWN_PUNISH
 
-    # # punish blocked pawns
+    # punish blocked pawns
 
-    # # revard mobility
-    # position_value += len(move_generation(state).values()) * 2 * (
-    #     -1 if state.player & b else 1)
-    # other_side = state._replace(player=state.player^PLAYER_BITS)
-    # position_value += len(move_generation(other_side).values()) * 2 * (
-    #     1 if state.player & b else -1)
+    # revard mobility
+    position_value += len(next_states) * MOBILITY_SCORE * (
+        -1 if state.player & b else 1)
+    other_side = state._replace(player=state.player^PLAYER_BITS)
+    position_value += len(move_generation(other_side).values()) * MOBILITY_SCORE * (
+        1 if state.player & b else -1)
     return position_value
 
 
