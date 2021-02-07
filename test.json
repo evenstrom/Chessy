@@ -613,7 +613,7 @@
       "type": "tactics_test",
       "source": "Susan Polgar Chess tactics for champions",
       "name": "Intermediate move 01",
-      "depth": 6,
+      "depth": 7,
       "fen": [
          "5k2/1p1q2p1/p2p2p1/n2Nb2p/8/1PB4P/P5P1/Q5K1 w - - 0 1",
          "5k2/1p4p1/p2p2p1/n2Nbq1p/8/1PB4P/P5P1/5QK1 w - - 2 2",

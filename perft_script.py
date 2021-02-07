@@ -67,17 +67,20 @@ if __name__ == "__main__":
             exit()
         
         elif cmd == "diff":
+            if depth - len(move_list) <= 0:
+                print("depth - len moves must be greater than 0")
+                continue
             stockfish.stdin.write(f"position fen {fen}")
             if move_list:
                 stockfish.stdin.write(f" moves {' '.join(move_list)}")
             stockfish.stdin.write(f"\n")
-            stockfish.stdin.write(f"go perft {depth}\n")
+            stockfish.stdin.write(f"go perft {depth - len(move_list)}\n")
             stockfish_nodes = read_stdout(stockfish, "Nodes searched: ")
             stockfish_nodes = dict(tuple(n.split(": ")) for n in stockfish_nodes[:-1])
             
             runscript = [*script]
             runscript.extend(
-                [f"{depth}", f"{fen}", ' '.join(move_list) if move_list else ""])
+                [f"{depth - len(move_list)}", f"{fen}", ' '.join(move_list) if move_list else ""])
             perft = subprocess.run(runscript,
                 capture_output=True, universal_newlines=True)
             capture = perft.stdout.splitlines()
